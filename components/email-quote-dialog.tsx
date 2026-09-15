@@ -1,6 +1,5 @@
 'use client';
 
-import { FormEvent } from 'react';
 import { Mail, Send } from 'lucide-react';
 
 import {
@@ -14,17 +13,22 @@ import {
 
 const destinationEmail = 'ceroclima.cl@gmail.com';
 
+function readField(data: FormData, name: string) {
+  const value = data.get(name);
+  return typeof value === 'string' ? value.trim() : '';
+}
+
 export function EmailQuoteDialog() {
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: { preventDefault: () => void; currentTarget: HTMLFormElement }) {
     event.preventDefault();
 
     const data = new FormData(event.currentTarget);
-    const name = String(data.get('name') ?? '').trim();
-    const email = String(data.get('email') ?? '').trim();
-    const phone = String(data.get('phone') ?? '').trim();
-    const commune = String(data.get('commune') ?? '').trim();
-    const space = String(data.get('space') ?? '').trim();
-    const message = String(data.get('message') ?? '').trim();
+    const name = readField(data, 'name');
+    const email = readField(data, 'email');
+    const phone = readField(data, 'phone');
+    const commune = readField(data, 'commune');
+    const space = readField(data, 'space');
+    const message = readField(data, 'message');
     const subject = `Solicitud de cotización — ${name}`;
     const body = [
       'Hola CEROCLIMA:',
@@ -46,7 +50,7 @@ export function EmailQuoteDialog() {
 
   return (
     <Dialog>
-      <DialogTrigger render={<button className="button button-email" type="button" />}>
+      <DialogTrigger render={<button aria-label="Cotizar por correo" className="button button-email" type="button" />}>
         <Mail aria-hidden="true" />
         Cotizar por correo
       </DialogTrigger>
