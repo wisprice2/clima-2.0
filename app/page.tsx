@@ -25,6 +25,7 @@ import { Brand } from '@/components/brand';
 import { Link } from '@/components/link';
 import { BtuSelector } from '@/components/btu-selector';
 import { HeroVideo } from '@/components/hero-video';
+import { EmailQuoteDialog } from '@/components/email-quote-dialog';
 import { SiteFooter } from '@/components/site-footer';
 import { SiteNavigation } from '@/components/site-navigation';
 
@@ -483,6 +484,7 @@ export default function Home() {
           <p>Cuéntanos qué espacio necesitas climatizar y te orientamos.</p>
           <div className="final-actions">
             <WhatsappButton light />
+            <EmailQuoteDialog />
             <a className="phone-link" href="tel:+56996809677"><Phone />+56 9 9680 9677</a>
           </div>
         </div>

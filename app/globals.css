@@ -1713,6 +1713,140 @@ a:focus-visible, button:focus-visible {
   color: var(--orange-light);
 }
 
+.button-email {
+  border-color: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.06);
+  color: white;
+}
+
+.button-email:hover {
+  border-color: rgba(0, 194, 255, 0.64);
+  background: rgba(0, 194, 255, 0.12);
+}
+
+[data-slot='dialog-overlay'] {
+  background: rgba(2, 8, 15, 0.78);
+  backdrop-filter: blur(8px);
+}
+
+.email-quote-dialog {
+  width: min(calc(100% - 32px), 680px);
+  max-width: 680px !important;
+  max-height: min(90dvh, 780px);
+  overflow-y: auto;
+  gap: 0;
+  border: 1px solid rgba(0, 194, 255, 0.26);
+  border-radius: 16px;
+  padding: 30px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(0, 194, 255, 0.12), transparent 19rem),
+    #091321;
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.62);
+  color: white;
+}
+
+.email-quote-dialog [data-slot='dialog-close'] {
+  border: 1px solid rgba(148, 163, 184, 0.24);
+  background: rgba(255, 255, 255, 0.05);
+  color: #dbe6ee;
+}
+
+.email-quote-dialog [data-slot='dialog-title'] {
+  margin-top: 8px;
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.email-quote-dialog [data-slot='dialog-description'] {
+  max-width: 570px;
+  margin-top: 10px;
+  color: #aebbc8;
+  font-size: 0.86rem;
+  line-height: 1.65;
+}
+
+.email-quote-form {
+  margin-top: 24px;
+}
+
+.email-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.email-form-grid label {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.email-form-grid label > span {
+  color: #c8d5df;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.email-form-grid input,
+.email-form-grid select,
+.email-form-grid textarea {
+  width: 100%;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  border-radius: 9px;
+  outline: 0;
+  background: rgba(4, 13, 24, 0.78);
+  color: white;
+  font: inherit;
+  font-size: 0.82rem;
+}
+
+.email-form-grid input,
+.email-form-grid select {
+  min-height: 48px;
+  padding: 0 13px;
+}
+
+.email-form-grid textarea {
+  min-height: 112px;
+  resize: vertical;
+  padding: 12px 13px;
+}
+
+.email-form-grid input::placeholder,
+.email-form-grid textarea::placeholder {
+  color: #718497;
+}
+
+.email-form-grid input:focus,
+.email-form-grid select:focus,
+.email-form-grid textarea:focus {
+  border-color: var(--cyan-bright);
+  box-shadow: 0 0 0 3px rgba(0, 194, 255, 0.12);
+}
+
+.email-form-full {
+  grid-column: 1 / -1;
+}
+
+.email-submit {
+  width: 100%;
+  min-height: 49px;
+  margin-top: 18px;
+}
+
+.email-form-note {
+  margin: 11px 0 0;
+  color: #8395a5;
+  font-size: 0.68rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
 .energy {
   position: absolute;
   top: 30%;
@@ -2186,6 +2320,9 @@ footer {
   .final-actions { flex-direction: column; gap: 18px; }
   .final-actions .button { width: min(100%, 320px); }
   .phone-link { font-size: 1.05rem; }
+  .email-quote-dialog { width: calc(100% - 20px); padding: 26px 20px 22px; }
+  .email-form-grid { grid-template-columns: 1fr; }
+  .email-form-full { grid-column: auto; }
   .footer-grid { grid-template-columns: 1fr 1fr; align-items: start; gap: 20px 14px; }
   .footer-grid > a, .footer-grid > span { min-height: 44px; }
   .footer-brand { grid-column: 1 / -1; }
