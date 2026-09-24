@@ -173,7 +173,7 @@ const homepageSchema = {
       '@type': 'HVACBusiness',
       name: 'CEROCLIMA SpA',
       telephone: '+56 9 9680 9677',
-      email: 'ceroclima.cl@gmail.com',
+      email: 'Ceroclima@gmail.com',
       areaServed: 'Desde Arica hasta la Región de Los Lagos, Chile',
       description: 'Instalación, mantención y asesoría en climatización residencial y comercial.',
       sameAs: [

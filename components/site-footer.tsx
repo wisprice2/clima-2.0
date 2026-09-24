@@ -18,7 +18,7 @@ export function SiteFooter({
             <span>CEROCLIMA SpA</span>
           </div>
           <a href={whatsappHref}><MessageCircle aria-hidden="true" />WhatsApp</a>
-          <a href="mailto:ceroclima.cl@gmail.com"><Mail aria-hidden="true" />ceroclima.cl@gmail.com</a>
+          <a href="mailto:Ceroclima@gmail.com"><Mail aria-hidden="true" />Ceroclima@gmail.com</a>
           <span><MapPin aria-hidden="true" />Arica a Los Lagos</span>
           <a href="https://www.instagram.com/cero_clima/" target="_blank" rel="noreferrer">
             <Camera aria-hidden="true" />Instagram

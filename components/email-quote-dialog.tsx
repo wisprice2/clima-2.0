@@ -11,7 +11,7 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 
-const destinationEmail = 'ceroclima.cl@gmail.com';
+const destinationEmail = 'Ceroclima@gmail.com';
 
 function readField(data: FormData, name: string) {
   const value = data.get(name);
